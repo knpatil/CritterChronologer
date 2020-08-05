@@ -1,6 +1,10 @@
 package com.kpatil.critter.user;
 
+import com.kpatil.critter.entity.Customer;
+import com.kpatil.critter.entity.Pet;
+
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Represents the form that customer request and response data takes. Does not map
@@ -51,5 +55,18 @@ public class CustomerDTO {
 
     public void setPetIds(List<Long> petIds) {
         this.petIds = petIds;
+    }
+
+    public static CustomerDTO build(Customer customer) {
+        if (customer == null)
+            return null;
+        CustomerDTO customerDTO = new CustomerDTO();
+        customerDTO.setId(customer.getId());
+        customerDTO.setName(customer.getName());
+        customerDTO.setPhoneNumber(customer.getPhoneNumber());
+        customerDTO.setNotes(customer.getNotes());
+        List<Long> petIds = customer.getPets().stream().map(Pet::getId).collect(Collectors.toList());
+        customerDTO.setPetIds(petIds);
+        return customerDTO;
     }
 }
