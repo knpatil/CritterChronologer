@@ -18,7 +18,7 @@ public class Customer {
 
     @OneToMany(targetEntity = Pet.class)
     @JoinTable(
-            name = "customer_pet_relationship",
+            name = "customer_pet",
             joinColumns = {@JoinColumn(name = "customer_id")},
             inverseJoinColumns = {@JoinColumn(name = "pet_id")}
     )

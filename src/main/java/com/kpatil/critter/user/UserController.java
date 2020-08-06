@@ -1,6 +1,7 @@
 package com.kpatil.critter.user;
 
 import com.kpatil.critter.entity.Customer;
+import com.kpatil.critter.entity.Employee;
 import com.kpatil.critter.service.CustomerService;
 import com.kpatil.critter.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,17 +48,20 @@ public class UserController {
 
     @GetMapping("/customer/pet/{petId}")
     public CustomerDTO getOwnerByPet(@PathVariable long petId) {
-        throw new UnsupportedOperationException();
+        return CustomerDTO.build(customerService.getOwnerByPet(petId));
     }
 
     @PostMapping("/employee")
     public EmployeeDTO saveEmployee(@RequestBody EmployeeDTO employeeDTO) {
-        throw new UnsupportedOperationException();
+        Employee employee = Employee.build(employeeDTO);
+        employee = employeeService.saveEmployee(employee);
+        return EmployeeDTO.build(employee);
     }
 
     @PostMapping("/employee/{employeeId}")
     public EmployeeDTO getEmployee(@PathVariable long employeeId) {
-        throw new UnsupportedOperationException();
+        Employee employee = employeeService.getEmployee(employeeId);
+        return EmployeeDTO.build(employee);
     }
 
     @PutMapping("/employee/{employeeId}")

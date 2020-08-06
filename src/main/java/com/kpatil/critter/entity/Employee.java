@@ -1,18 +1,24 @@
-package com.kpatil.critter.user;
+package com.kpatil.critter.entity;
 
-import com.kpatil.critter.entity.Employee;
+import com.kpatil.critter.user.EmployeeDTO;
+import com.kpatil.critter.user.EmployeeSkill;
 
+import javax.persistence.*;
 import java.time.DayOfWeek;
 import java.util.Set;
 
-/**
- * Represents the form that employee request and response data takes. Does not map
- * to the database directly.
- */
-public class EmployeeDTO {
+@Entity
+public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String name;
+
+    @ElementCollection
     private Set<EmployeeSkill> skills;
+
+    @ElementCollection
     private Set<DayOfWeek> daysAvailable;
 
     public long getId() {
@@ -47,12 +53,12 @@ public class EmployeeDTO {
         this.daysAvailable = daysAvailable;
     }
 
-    public static EmployeeDTO build(Employee e) {
-        EmployeeDTO employeeDTO = new EmployeeDTO();
-        employeeDTO.setId(e.getId());
-        employeeDTO.setName(e.getName());
-        employeeDTO.setSkills(e.getSkills());
-        employeeDTO.setDaysAvailable(e.getDaysAvailable());
-        return employeeDTO;
+    public static Employee build(EmployeeDTO dto) {
+        Employee emp = new Employee();
+        emp.setId(dto.getId());
+        emp.setName(dto.getName());
+        emp.setSkills(dto.getSkills());
+        emp.setDaysAvailable(dto.getDaysAvailable());
+        return emp;
     }
 }
