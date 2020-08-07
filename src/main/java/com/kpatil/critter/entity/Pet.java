@@ -1,5 +1,6 @@
 package com.kpatil.critter.entity;
 
+import com.kpatil.critter.pet.PetDTO;
 import com.kpatil.critter.pet.PetType;
 
 import javax.persistence.*;
@@ -21,13 +22,13 @@ public class Pet {
 
     private String notes;
 
-    public Pet(Long id, PetType petType, String name, Customer customer, LocalDate birthDate, String notes) {
-        this.id = id;
-        this.petType = petType;
-        this.name = name;
-        this.customer = customer;
-        this.birthDate = birthDate;
-        this.notes = notes;
+    public static Pet build(PetDTO petDTO) {
+        Pet pet = new Pet();
+        pet.setPetType(petDTO.getType());
+        pet.setName(petDTO.getName());
+        pet.setBirthDate(petDTO.getBirthDate());
+        pet.setNotes(petDTO.getNotes());
+        return pet;
     }
 
     public Long getId() {

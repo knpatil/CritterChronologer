@@ -1,5 +1,7 @@
 package com.kpatil.critter.pet;
 
+import com.kpatil.critter.entity.Pet;
+
 import java.time.LocalDate;
 
 /**
@@ -13,6 +15,17 @@ public class PetDTO {
     private long ownerId;
     private LocalDate birthDate;
     private String notes;
+
+    public static PetDTO build(Pet pet) {
+        PetDTO petDTO = new PetDTO();
+        petDTO.setId(pet.getId());
+        petDTO.setName(pet.getName());
+        petDTO.setType(pet.getPetType());
+        petDTO.setOwnerId(pet.getCustomer().getId());
+        petDTO.setBirthDate(pet.getBirthDate());
+        petDTO.setNotes(pet.getNotes());
+        return petDTO;
+    }
 
     public PetType getType() {
         return type;
