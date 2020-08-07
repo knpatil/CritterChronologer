@@ -33,8 +33,8 @@ public class UserController {
 
     @PostMapping("/customer")
     public CustomerDTO saveCustomer(@RequestBody CustomerDTO customerDTO) {
-        Customer customer =
-                customerService.saveCustomer(Customer.build(customerDTO));
+        Customer customer = Customer.build(customerDTO);
+        customer = customerService.saveCustomer(customer);
         return CustomerDTO.build(customer);
     }
 
