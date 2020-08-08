@@ -40,14 +40,17 @@ public class PetService {
     }
 
     public Pet getPet(long petId) {
+        logger.info("Finding a pet with id " + petId);
         return this.petRepository.getOne(petId);
     }
 
     public List<Pet> getPets() {
+        logger.info("Finding all pets ...");
         return this.petRepository.findAll();
     }
 
     public List<Pet> getPetsByOwner(long ownerId) {
+        logger.info("Finding a pet by owner id " + ownerId);
         return this.petRepository.findByCustomerId(ownerId);
     }
 }
