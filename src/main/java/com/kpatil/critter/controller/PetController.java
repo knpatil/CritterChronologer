@@ -1,6 +1,7 @@
-package com.kpatil.critter.pet;
+package com.kpatil.critter.controller;
 
 import com.kpatil.critter.entity.Pet;
+import com.kpatil.critter.dto.PetDTO;
 import com.kpatil.critter.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

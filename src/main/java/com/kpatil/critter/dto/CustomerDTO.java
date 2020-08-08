@@ -1,4 +1,4 @@
-package com.kpatil.critter.user;
+package com.kpatil.critter.dto;
 
 import com.kpatil.critter.entity.Customer;
 import com.kpatil.critter.entity.Pet;

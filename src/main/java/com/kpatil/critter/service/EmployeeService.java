@@ -2,7 +2,7 @@ package com.kpatil.critter.service;
 
 import com.kpatil.critter.entity.Employee;
 import com.kpatil.critter.repository.EmployeeRepository;
-import com.kpatil.critter.user.EmployeeSkill;
+import com.kpatil.critter.constants.EmployeeSkill;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

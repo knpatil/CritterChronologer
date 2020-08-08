@@ -1,4 +1,4 @@
-package com.kpatil.critter.user;
+package com.kpatil.critter.constants;
 
 /**
  * A example list of employee skills that could be included on an employee or a schedule request.

@@ -1,7 +1,7 @@
 package com.kpatil.critter.entity;
 
-import com.kpatil.critter.pet.PetDTO;
-import com.kpatil.critter.pet.PetType;
+import com.kpatil.critter.dto.PetDTO;
+import com.kpatil.critter.constants.PetType;
 
 import javax.persistence.*;
 import java.time.LocalDate;

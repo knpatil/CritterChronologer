@@ -1,6 +1,6 @@
 package com.kpatil.critter.entity;
 
-import com.kpatil.critter.user.CustomerDTO;
+import com.kpatil.critter.dto.CustomerDTO;
 
 import javax.persistence.*;
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 package com.kpatil.critter.entity;
 
-import com.kpatil.critter.schedule.ScheduleDTO;
-import com.kpatil.critter.user.EmployeeSkill;
+import com.kpatil.critter.dto.ScheduleDTO;
+import com.kpatil.critter.constants.EmployeeSkill;
 
 import javax.persistence.*;
 import java.time.LocalDate;

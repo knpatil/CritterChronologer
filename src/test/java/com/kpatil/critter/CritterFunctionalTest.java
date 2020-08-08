@@ -2,12 +2,12 @@ package com.kpatil.critter;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-import com.kpatil.critter.pet.PetController;
-import com.kpatil.critter.pet.PetDTO;
-import com.kpatil.critter.pet.PetType;
-import com.kpatil.critter.schedule.ScheduleController;
-import com.kpatil.critter.schedule.ScheduleDTO;
-import com.kpatil.critter.user.*;
+import com.kpatil.critter.constants.EmployeeSkill;
+import com.kpatil.critter.controller.PetController;
+import com.kpatil.critter.controller.UserController;
+import com.kpatil.critter.dto.*;
+import com.kpatil.critter.constants.PetType;
+import com.kpatil.critter.controller.ScheduleController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

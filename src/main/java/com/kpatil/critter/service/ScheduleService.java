@@ -8,7 +8,7 @@ import com.kpatil.critter.repository.CustomerRepository;
 import com.kpatil.critter.repository.EmployeeRepository;
 import com.kpatil.critter.repository.PetRepository;
 import com.kpatil.critter.repository.ScheduleRepository;
-import com.kpatil.critter.schedule.ScheduleDTO;
+import com.kpatil.critter.dto.ScheduleDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

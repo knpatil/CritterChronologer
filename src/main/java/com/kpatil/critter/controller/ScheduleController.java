@@ -1,6 +1,7 @@
-package com.kpatil.critter.schedule;
+package com.kpatil.critter.controller;
 
 import com.kpatil.critter.entity.Schedule;
+import com.kpatil.critter.dto.ScheduleDTO;
 import com.kpatil.critter.service.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

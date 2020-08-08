@@ -1,4 +1,6 @@
-package com.kpatil.critter.user;
+package com.kpatil.critter.dto;
+
+import com.kpatil.critter.constants.EmployeeSkill;
 
 import java.time.LocalDate;
 import java.util.Set;

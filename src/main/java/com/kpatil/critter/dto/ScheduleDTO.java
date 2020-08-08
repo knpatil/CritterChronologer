@@ -1,9 +1,9 @@
-package com.kpatil.critter.schedule;
+package com.kpatil.critter.dto;
 
 import com.kpatil.critter.entity.Employee;
 import com.kpatil.critter.entity.Pet;
 import com.kpatil.critter.entity.Schedule;
-import com.kpatil.critter.user.EmployeeSkill;
+import com.kpatil.critter.constants.EmployeeSkill;
 
 import java.time.LocalDate;
 import java.util.List;
